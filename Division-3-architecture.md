@@ -10,45 +10,45 @@ Let's dissect the stack, from the foundational layer of identity to the high-lev
 
 ---
 
-## 🏗️ **The Three-Layer Architecture**
+##  **The Three-Layer Architecture**
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                     LAYER 3: ECONOMIC LAYER                    │
-│                      (Chronos Ledger)                          │
-│                                                                 │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐  │
-│  │    Smart        │ │    CORE Token   │ │   Transaction   │  │
-│  │   Contracts     │ │    Economics    │ │   Processing    │  │
-│  └─────────────────┘ └─────────────────┘ └─────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-                                │
-                                ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   LAYER 2: SYMBIOTIC LAYER                     │
-│                     (Synapse Protocol)                         │
-│                                                                 │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐  │
-│  │    Machine      │ │     Service     │ │   Decentralized │  │
-│  │ State Protocol  │ │   Discovery     │ │   Negotiation   │  │
-│  └─────────────────┘ └─────────────────┘ └─────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
-                                │
-                                ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   LAYER 1: SOVEREIGN LAYER                     │
-│                     (Helios Protocol)                          │
-│                                                                 │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐  │
-│  │  Decentralized  │ │   Verifiable    │ │   Trustless     │  │
-│  │   Identifiers   │ │   Credentials   │ │  Verification   │  │
-│  └─────────────────┘ └─────────────────┘ └─────────────────┘  │
-└─────────────────────────────────────────────────────────────────┘
+
+                     LAYER 3: ECONOMIC LAYER                    
+                      (Chronos Ledger)                          
+                                                                 
+      
+      Smart             CORE Token       Transaction     
+     Contracts          Economics        Processing      
+      
+
+                                
+                                
+
+                   LAYER 2: SYMBIOTIC LAYER                     
+                     (Synapse Protocol)                         
+                                                                 
+      
+      Machine            Service         Decentralized   
+   State Protocol      Discovery         Negotiation     
+      
+
+                                
+                                
+
+                   LAYER 1: SOVEREIGN LAYER                     
+                     (Helios Protocol)                          
+                                                                 
+      
+    Decentralized      Verifiable        Trustless       
+     Identifiers       Credentials      Verification     
+      
+
 ```
 
 ---
 
-## 🆔 **3.1 Layer 1: The Sovereign Layer (Helios Protocol)**
+##  **3.1 Layer 1: The Sovereign Layer (Helios Protocol)**
 
 > **Identity Before Interaction.**
 
@@ -56,9 +56,9 @@ Trust in a decentralized system cannot be assumed; it must be **provable**. The 
 
 Based on the **World Wide Web Consortium (W3C) standards** for Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs), Helios gives every machine a **cryptographic passport**, freeing it from dependence on any central authority.
 
-### 🏭 **Core Mechanics**
+###  **Core Mechanics**
 
-#### **⚡ Machine Genesis**
+#### ** Machine Genesis**
 
 When a machine is first brought online and registered to Optimus Core, its owner (or the machine itself) generates a **public/private key pair**. The public key forms the basis of its unique, permanent **DID** (e.g., `did:optimus:1a83...f4be`), which is then immutably registered on the **Chronos Ledger**. 
 
@@ -93,13 +93,13 @@ interface MachineGenesis {
 }
 ```
 
-#### **📜 Verifiable Credentials (The Digital Resume)**
+#### ** Verifiable Credentials (The Digital Resume)**
 
 A DID alone is just an identifier. Its power comes from the **credentials associated with it**. VCs are cryptographically signed, tamper-proof attestations from trusted issuers.
 
 **Example Credential Types**:
 
-##### **🏭 Manufacturer Credential**
+##### ** Manufacturer Credential**
 ```json
 {
   "@context": ["https://www.w3.org/2018/credentials/v1"],
@@ -135,7 +135,7 @@ A DID alone is just an identifier. Its power comes from the **credentials associ
 }
 ```
 
-##### **🔧 Maintenance Provider Credential**
+##### ** Maintenance Provider Credential**
 ```json
 {
   "@context": ["https://www.w3.org/2018/credentials/v1"],
@@ -165,7 +165,7 @@ A DID alone is just an identifier. Its power comes from the **credentials associ
 }
 ```
 
-##### **👤 Owner Authorization Credential**
+##### ** Owner Authorization Credential**
 ```json
 {
   "@context": ["https://www.w3.org/2018/credentials/v1"],
@@ -201,7 +201,7 @@ A DID alone is just an identifier. Its power comes from the **credentials associ
 }
 ```
 
-#### **🔐 Trustless Verification**
+#### ** Trustless Verification**
 
 When two machines interact, they present their **DIDs and relevant VCs**. The counterparty can instantly verify the signature of the credential issuer on-chain, thereby **trusting the claim without needing to trust the machine making it**. 
 
@@ -245,15 +245,15 @@ class CredentialVerifier {
 
 ---
 
-## 🔗 **3.2 Layer 2: The Symbiotic Layer (Synapse Protocol)**
+##  **3.2 Layer 2: The Symbiotic Layer (Synapse Protocol)**
 
 > **Awareness Before Agreement.**
 
 Once identity is established, machines need a way to **discover one another** and **communicate their needs and capabilities**. Synapse is our lightweight, peer-to-peer **Machine State Protocol (MSP)**, designed for the chaotic and dynamic real world. It functions as a **decentralized nervous system**, allowing for ambient awareness and active service discovery.
 
-### 🧠 **Core Mechanics**
+###  **Core Mechanics**
 
-#### **📡 State Gossip**
+#### ** State Gossip**
 
 Machines on the network periodically broadcast a lightweight, standardized **state packet** to their local peers. This "gossip" is not resource-intensive and contains essential information about the machine's current status and capabilities.
 
@@ -304,7 +304,7 @@ Machines on the network periodically broadcast a lightweight, standardized **sta
 
 This creates a **constantly updating, localized map** of the capabilities available in any given area, without a central server.
 
-#### **📋 Task Manifests & Service Discovery**
+#### ** Task Manifests & Service Discovery**
 
 When a machine requires a service, it broadcasts a **"Task Manifest"** across the Synapse network. This is a structured request detailing the job to be done.
 
@@ -364,7 +364,7 @@ When a machine requires a service, it broadcasts a **"Task Manifest"** across th
 }
 ```
 
-#### **🤝 Decentralized Negotiation**
+#### ** Decentralized Negotiation**
 
 Nearby drones or ground sensors that can fulfill this task will detect the manifest. They can then initiate a **private, peer-to-peer negotiation** with the requesting machine, entering an automated bidding process (e.g., a reverse Dutch auction).
 
@@ -444,15 +444,15 @@ This entire **discovery and negotiation process happens off-chain** to ensure ma
 
 ---
 
-## 💰 **3.3 Layer 3: The Economic Layer (Chronos Ledger)**
+##  **3.3 Layer 3: The Economic Layer (Chronos Ledger)**
 
 > **Agreement Before Action.**
 
 All discovery and negotiation crystallize into **value exchange** on the **Chronos Ledger**. This is the blockchain at the heart of Optimus Core. It is not a general-purpose blockchain trying to be everything to everyone; it is a **highly specialized distributed ledger** architected for the unique demands of a global M2M economy.
 
-### ⚙️ **Architectural Properties**
+###  **Architectural Properties**
 
-#### **🏛️ Consensus: Delegated Proof-of-Stake (DPoS)**
+#### ** Consensus: Delegated Proof-of-Stake (DPoS)**
 
 Chronos utilizes a **Delegated Proof-of-Stake (DPoS)** consensus mechanism, optimized for high throughput and low latency. This allows for **thousands of transactions per second (TPS)** with **sub-second finality**, crucial for machines making real-time economic decisions.
 
@@ -503,7 +503,7 @@ class DPoSConsensus {
 }
 ```
 
-#### **💸 Low-Cost Transactions**
+#### ** Low-Cost Transactions**
 
 The fee structure is designed to be **minimal** (fractions of a cent), making billions of daily nano-transactions economically viable.
 
@@ -534,7 +534,7 @@ interface TransactionFeeSchedule {
 }
 ```
 
-#### **🖥️ WASM-Based Smart Contracts**
+#### ** WASM-Based Smart Contracts**
 
 The ledger supports smart contracts compiled to **WebAssembly (WASM)**. This provides a secure, high-performance, and language-agnostic environment for developers to build complex autonomous business logic.
 
@@ -640,11 +640,11 @@ impl TaskEscrow {
 }
 ```
 
-### 💎 **The OPTIMUS Token & Economic Abstraction**
+###  **The OPTIMUS Token & Economic Abstraction**
 
 The **OPTIMUS token** is the lifeblood of this economy. Its function is elegantly simple: it is an **abstraction of energy, work, and trust**.
 
-#### **⚡ Work & Energy**
+#### ** Work & Energy**
 
 When a machine performs a task—be it transporting a package, processing data, or providing energy—it is **compensated in OPTIMUS**. The token becomes a **universal, liquid measure of machine-work**.
 
@@ -679,7 +679,7 @@ interface WorkQuantification {
 }
 ```
 
-#### **🔒 Trust & Security**
+#### ** Trust & Security**
 
 Network security is maintained by a set of globally distributed **validator nodes**. These validators are chosen by OPTIMUS token holders, who **delegate their tokens** as a vote of confidence. Validators process transactions and are rewarded with transaction fees and protocol inflation.
 
@@ -740,11 +740,11 @@ This staking mechanism creates a **powerful economic incentive** for all partici
 
 ---
 
-## 🔄 **Workflow Synthesis: The Complete Picture**
+##  **Workflow Synthesis: The Complete Picture**
 
 Let us revisit our **autonomous repair drone** to see the full protocol stack in action:
 
-### **🎬 Complete Autonomous Repair Scenario**
+### ** Complete Autonomous Repair Scenario**
 
 #### **Phase 1: Synapse (Discovery) - 6:47 AM**
 ```json
@@ -881,7 +881,7 @@ escrow_contract.submit_proof_of_work(
 // Event emitted: "ProofSubmitted" -> 2200 CORE transferred
 ```
 
-### **📊 Transaction Summary**
+### ** Transaction Summary**
 - **Total Duration**: 1 hour, 37 minutes
 - **Human Interventions**: 0
 - **Autonomous Contracts**: 1 (escrow) + 1 (parts procurement)
@@ -892,23 +892,23 @@ escrow_contract.submit_proof_of_work(
 
 ---
 
-## 🌐 **Emergent Behaviors**
+##  **Emergent Behaviors**
 
 This entire interaction—from discovery to settlement—is **seamless, trustless, and fully autonomous**, orchestrated by the layered architecture of the Optimus-core Protocol. 
 
 But the true power emerges when millions of these interactions happen simultaneously:
 
-### **🏭 Emergent Industrial Ecosystems**
+### ** Emergent Industrial Ecosystems**
 - Factories that **self-organize** supply chains
 - Maintenance networks that **predict failures** before they occur
 - Quality assurance that **evolves** with production patterns
 
-### **🌾 Emergent Agricultural Collectives**
+### ** Emergent Agricultural Collectives**
 - Farms that **share resources** dynamically based on weather patterns
 - Crop monitoring that **collaborates** across property boundaries
 - Harvest coordination that **optimizes** for global food distribution
 
-### **🏙️ Emergent Smart Cities**
+### ** Emergent Smart Cities**
 - Traffic systems that **negotiate** with individual vehicles
 - Energy grids that **balance** supply and demand through micro-auctions
 - Waste management that **adapts** to real-time urban patterns
